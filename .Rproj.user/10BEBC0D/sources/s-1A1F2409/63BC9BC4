@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1517348870374.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "63BC9BC4",
+    "lastKnownWriteTime" : 1517353183,
+    "last_content_update" : 1517353183668,
+    "path" : "~/Projects/RStuff/Misc/forcast_tut.R",
+    "project_path" : "forcast_tut.R",
+    "properties" : {
+        "cursorPosition" : "14,15",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

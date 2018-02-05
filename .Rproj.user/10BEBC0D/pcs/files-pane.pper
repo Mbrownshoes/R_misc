@@ -1,0 +1,13 @@
+{
+    "path" : "~/Projects/RStuff/Misc",
+    "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 4
+        },
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
