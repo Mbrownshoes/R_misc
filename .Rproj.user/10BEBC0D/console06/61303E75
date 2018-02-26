@@ -1,1 +1,82 @@
-]0;~/Projects/RStuff/Misc[?1034h[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ 
+]0;~/Projects/RStuff/Misc[?1034h[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ cd Rplot.png 
+bash: cd: Rplot.png: Not a directory
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ cd CR
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ ls
+[1m[32mCR_2012.cpg[39;49m[0m*          [1m[32mCR_2012.shp[39;49m[0m*          [1m[34mcb_2014_us_nation_5m[39;49m[0m/ [1m[34mcommunities[39;49m[0m/
+[1m[32mCR_2012.dbf[39;49m[0m*          [1m[32mCR_2012.shx[39;49m[0m*          [1m[34mcities[39;49m[0m/
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ mov[K[K[Kmkdir ocean
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ cp bc[K[Kcb_2014_us_nation_5m/* ocean/.
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ rm cb_2014_us_nation_5m/
+rm: cb_2014_us_nation_5m/: is a directory
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ rm cb_2014_us_nation_5m/-cb_2014_us_nation_5m/rcb_2014_us_nation_5m/fcb_2014_us_nation_5m/ cb_2014_us_nation_5m/
+]0;~/Projects/RStuff/Misc/CR[?1034h[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ mkd[K[K[Kls
+[1m[32mCR_2012.cpg[39;49m[0m*          [1m[32mCR_2012.shp[39;49m[0m*          [1m[34mcb_2014_us_nation_5m[39;49m[0m/ [1m[34mcommunities[39;49m[0m/          [1m[34mne_50m_ocean[39;49m[0m/
+[1m[32mCR_2012.dbf[39;49m[0m*          [1m[32mCR_2012.shx[39;49m[0m*          [1m[34mcities[39;49m[0m/               [1m[34mne_10m_ocean[39;49m[0m/
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ mkdir police
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ cd [K[K[K [Kmkdir police/Resp_Codes_Cartographic2016_singlepart[K[K[K[K[K[K[K[K[K[K[K[K6
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ pwd
+/Users/matbrown/Projects/RStuff/Misc/CR
+]0;~/Projects/RStuff/Misc/CR[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc/CR[m$ cd ..
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ m[Kpwd
+/Users/matbrown/Projects/RStuff/Misc
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ mkdir police
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ mkdir police/Resp_Codes_Cartographic2016_singlepart[K[K[K[K[K[K[K[K[K[K[K[K6
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ [K[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ pwd
+/Users/matbrown/Projects/RStuff/Misc
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ ls
+[1m[34mCR[39;49m[0m/                           VI_rd.pdf                     police_jurisdictions_merge.R
+CR_map.R                      VI_rd.png                     raking_test.R
+Misc.Rproj                    forcast_tut.R                 spatial_play.R
+[1m[34mPCensus[39;49m[0m/                      [1m[34mout[39;49m[0m/
+Rplot.png                     [1m[34mpolice[39;49m[0m/
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ mkdir police/CSC[KD
+]0;~/Projects/RStuff/Misc[?1034h[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/10BEBC0D/console06/61303E75[m
+	[31mmodified:   .Rproj.user/10BEBC0D/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/10BEBC0D/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/10BEBC0D/pcs/windowlayoutstate.pper[m
+	[31mmodified:   .Rproj.user/10BEBC0D/pcs/workbench-pane.pper[m
+	[31mmodified:   .Rproj.user/10BEBC0D/sources/prop/AC693267[m
+	[31mmodified:   .Rproj.user/10BEBC0D/sources/prop/D23494A8[m
+	[31mmodified:   .Rproj.user/10BEBC0D/sources/prop/INDEX[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/186891B8[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/186891B8-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/60C628FE[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/60C628FE-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/63BC9BC4[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/63BC9BC4-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/857A075D-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/8E044A6F[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/8E044A6F-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/9B0B982D-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/9FB7DA9-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/D7C0F8B1-contents[m
+	[31mdeleted:    .Rproj.user/10BEBC0D/sources/s-1A1F2409/lock_file[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   .gitignore[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mCR/[m
+	[31mCR_map.R[m
+	[31mRplot.png[m
+	[31mVI_rd.pdf[m
+	[31mVI_rd.png[m
+	[31mmerged.dbf[m
+	[31mmerged.prj[m
+	[31mmerged.shp[m
+	[31mmerged.shx[m
+	[31mout/[m
+	[31mpolice/[m
+	[31mpolice_jurisdictions_merge.R[m
+	[31mspatial_play.R[m
+	[31mtest_merge.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Projects/RStuff/Misc[36mmatbrown[m:[33;1m~/Projects/RStuff/Misc[m$ 
