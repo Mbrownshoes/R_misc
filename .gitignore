@@ -1,6 +1,6 @@
 *.csv
 .DS_Store
-.Rproj.user
+.Rproj.user/*
 out
 police
 CR

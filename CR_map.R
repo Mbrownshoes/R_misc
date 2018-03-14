@@ -42,22 +42,25 @@ ocean50 <-st_read("CR/ne_10m_ocean/ne_10m_ocean.shp")
 # o<- as(ocean50,"Spatial")
 # out <- raster::crop(o, extent(-129.45,-122.45,47.4 49.999))
 # try with sf
-pac<-st_intersection(ocean50, st_set_crs(st_as_sf(as(raster::extent(-129.45,-120.45,44.49, 55.99), "SpatialPolygons")), st_crs(ocean50)))
+# ocean50 <- ms_simplify(ocean50) # simplifying removes us gulf islands
+pac<-st_intersection(ocean50, st_set_crs(st_as_sf(as(raster::extent(-129.45,-120.45,44.49, 55.99), "SpatialPolygons")),
+                                         st_crs(ocean50)))
 
 
 ocean <- pac %>% 
   st_transform(3005) %>% 
   as("Spatial")
+
 ocean <- fortify(ocean) 
 
 # %>% 
   # filter(hole==TRUE)
 
 ggplot(data = plotmapdf, aes(x = long, y = lat, group = group,fill=VI)) +
+  geom_polygon(data = ocean, aes(long, lat, group = group,fill=hole),inherit.aes = FALSE) +
   geom_polygon(alpha = 0.9) +
   geom_path(colour = "grey50", size = 0.3) +
-  coord_fixed(xlim = c(1370571.8, 1003875.7),  ylim = c(369045, 649045), ratio = 0.79)+
-  geom_polygon(data = ocean, aes(long, lat,fill=hole),inherit.aes = FALSE)
+  coord_fixed(xlim = c(1370571.8, 1003875.7),  ylim = c(369045, 649045), ratio = 0.79) 
   
 # ocean <- st_read("CR/ne_10m_ocean/ne_10m_ocean.shp")
 # 
@@ -67,7 +70,7 @@ ggplot(data = plotmapdf, aes(x = long, y = lat, group = group,fill=VI)) +
 
 #### college regions
 cr_simp <- st_read("CR/CR_2012.shp")
-
+cr_simp <- ms_simplify(cr_simp)
 # cr_simp <- ms_simplify(nc)
 # add projection
 p4s <-"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
@@ -105,16 +108,14 @@ places <- data.frame(id = idList, centroids.df)
 ## plotting chloropleth
 ## creating a colour brewer palette from http://colorbrewer2.org/
 
-pal <- c("#FED98E",'white',"#FFFFD4",'ocean'='lightblue')
-
-# pal<- (brewer.pal(5, "YlOrBr")[5:1])
+cols <- c("FALSE"='lightblue',"other"="#FFFFD4",'TRUE'='white',"Vancouver Island"="#FED98E")
 
 ggplot(data = plotmapdf, aes(x = long, y = lat, group = group,fill=VI)) +
   geom_polygon(data = ocean, aes(long, lat, group = group,fill=hole),inherit.aes = FALSE) +
   geom_polygon(alpha = 0.9) +
   geom_path(colour = "grey50", size = 0.3) +
   coord_fixed(xlim = c(1370571.8, 1003875.7),  ylim = c(369045, 649045), ratio = 0.79)  + 
-  scale_fill_manual(values = rev(pal))+
+  scale_fill_manual(values = cols,guide = guide_legend(order = 1, title.position = "top")) +
   guides(fill=FALSE)  +
   # geom_polygon(data=us,fill = 'grey50' ) +
   # geom_polygon(data = ocean, aes(long, lat, group = group,fill=hole),inherit.aes = FALSE) +
@@ -135,7 +136,7 @@ ggplot(data = plotmapdf, aes(x = long, y = lat, group = group,fill=VI)) +
         plot.margin = unit(c(5, 5, 5, 5), "mm"))
   # geom_polygon(data=subset(plotmapdf,id='Vancouver Island'),fill='blue')
                      
-plot(rd_plot)
+# plot(rd_plot)
 
 ## saving plots as SVG
 
@@ -144,7 +145,7 @@ if (!exists("out")) dir.create('out', showWarnings = FALSE)
 
 ggsave("out/VI_rd.png", width = 40, height = 35.8, units = "cm")
 
-svg_px("popn_pctplot.svg", width = 650, height = 550)
+# svg_px("out/VI_rd.svg", width = 650, height = 550)
 plot(rd_plot)
 dev.off()
 

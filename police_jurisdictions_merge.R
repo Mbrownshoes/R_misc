@@ -38,16 +38,17 @@ merged <- st_as_sf(subs_union) %>%
 # merge Northern Rockies Muni back into Northern Rockies Rural
 c <- merged %>%
   group_by(RESP_CODE) %>% 
-  summarise(Location = first(Location),District = first(District), n = n()) %>% 
-  ungroup()
+  summarise(Location = first(Location),District = first(District),Force_Type = first(Force_Type), n = n()) %>% 
+  ungroup() %>%
+  mutate(Force_Type=replace(Force_Type, RESP_CODE==59825,"RCMP (RURAL)"))
 
-st_write(c, "out/merged.shp")
+st_write(c, "out/merged_rcmp.shp")
 
 c <- ms_simplify(c)
 # c<-st_transform(c, 3005) 
 
 ggplot(c) +
-  geom_sf(aes(fill = RESP_CODE))+
+  geom_sf(aes(fill = Force_Type))+
   theme_minimal() +
   theme(
     # panel.background = element_rect(fill = 'lightblue', colour = 'lightblue'),
